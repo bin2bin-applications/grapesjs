@@ -9,6 +9,7 @@ RUN \
   apt-get update && \
   apt-get install -y nginx git && \
   git clone https://github.com/artf/grapesjs.git /root/app && \
+  cp -r "/root/app/*.js*" "/root/app" && \
   rm -rf /root/app/.git && \
   apt-get --purge autoremove -y git && \
   apt-get clean && \
